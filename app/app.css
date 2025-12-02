@@ -4,12 +4,13 @@
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --color-primary: #cba503;
   --color-text-primary: #efcd29;
-  --bg-text: #18190a;
+  --color-text: #18190a;
   --color-footer-primary: #d9ae00;
   --color-footer-secondary: #161616;
   --color-secondary: #020202;
   --color-white: #f7f5ea;
   --color-yellow-10: #312600;
+  --color-error: oklch(63.7% 0.237 25.331);
 }
 
 html,
