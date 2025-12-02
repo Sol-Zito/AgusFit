@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router";
 import { FormContact } from "./FormContact";
+import { EncabezadoPrincipal } from "~/component/EncabezadoPrincipal";
 
 export function First() {
   const [isClient, setIsClient] = useState(true);
@@ -17,18 +18,10 @@ export function First() {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center pt-15 pb-4 gap-9 w-5/6 m-auto h-full">
-      <header className="flex flex-col items-center">
-        <h2 className="">
-          <strong>🏋️Tu compañero digital para una vida sana y activa.</strong>
-        </h2>
-        <div className="w-full border border-gray-200 mx-2"></div>
-        <h2>
-          <strong>Entrena con Agustin💪🏻</strong>
-        </h2>
-      </header>
+    <div className="flex flex-col items-center justify-center pb-4 gap-9 w-5/6 m-auto h-full">
+      <EncabezadoPrincipal />
       <div>
-        <h1>Hola!! Espero que estes bien,</h1>
+        <h1>Hola!! Espero que estes bien💪🏻</h1>
         <Formik
           initialValues={{ passwordClient: "" }}
           validationSchema={validationSchema}
@@ -36,7 +29,7 @@ export function First() {
             console.log(values, "values");
             if (values.passwordClient == "Agusfit") {
               console.log(values, "values en onsubmit");
-              navigate("/home");
+              navigate("/welcome");
               alert(JSON.stringify(values, null, 2));
             }
           }}
@@ -61,7 +54,9 @@ export function First() {
                   value={values.passwordClient}
                   className="w-full block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                 />
-                {touched.passwordClient && errors.passwordClient}
+                <p className="text-error">
+                  {touched.passwordClient && errors.passwordClient}
+                </p>
               </div>
               <button
                 type="submit"
