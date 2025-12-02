@@ -33,7 +33,6 @@ export function First() {
             if (values.passwordClient == "Agusfit") {
               console.log(values, "values en onsubmit");
               navigate("/welcome");
-              alert(JSON.stringify(values, null, 2));
             }
           }}
         >
