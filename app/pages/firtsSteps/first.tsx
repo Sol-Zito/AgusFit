@@ -71,9 +71,9 @@ export function First() {
                 </button>
               </div>
 
-                <p className="text-error">
-                  {touched.passwordClient && errors.passwordClient}
-                </p>
+              <p className="text-error">
+                {touched.passwordClient && errors.passwordClient}
+              </p>
               <button
                 type="submit"
                 className="transition duration-150 ease-in-out cursor-pointer hover:-translate-y-1 pointer-events-auto border border-gray-200 hover:bg-primary hover:text-text hover:font-bold 
