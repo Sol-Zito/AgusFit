@@ -27,7 +27,7 @@ export const FormContact = () => {
   });
   return (
     <div>
-      <div className="border border-white p-5 mt-2">
+      <div className="border border-white p-5 ">
         <Formik
           initialValues={{
             firstName: "",
@@ -74,7 +74,7 @@ export const FormContact = () => {
               <h2 className=" font-semibold text-white text-center">
                 Datos Personales para una mejor comunicacion:
               </h2>
-              <div className="mt-10 grid grid-cols-3 gap-6 sm:grid-cols-4">
+              <div className="mt-5 grid grid-cols-3 gap-6 sm:grid-cols-4">
                 <div className="col-span-3 sm:col-span-2">
                   <label
                     htmlFor="firstName"
@@ -82,7 +82,7 @@ export const FormContact = () => {
                   >
                     Nombre
                   </label>
-                  <div className="mt-2">
+                  <div className="">
                     <input
                       id="firstName"
                       name="firstName"
@@ -105,7 +105,7 @@ export const FormContact = () => {
                   >
                     Apellido
                   </label>
-                  <div className="mt-2">
+                  <div className="">
                     <input
                       id="lastName"
                       name="lastName"
@@ -127,7 +127,7 @@ export const FormContact = () => {
                   >
                     Email
                   </label>
-                  <div className="mt-2"></div>
+                  <div className=""></div>
                   <input
                     id="email"
                     name="email"
@@ -147,7 +147,7 @@ export const FormContact = () => {
                   >
                     Pais
                   </label>
-                  <div className="mt-2 grid grid-cols-1">
+                  <div className=" grid grid-cols-1">
                     <select
                       id="country"
                       name="country"
@@ -173,7 +173,7 @@ export const FormContact = () => {
                   >
                     Celular
                   </label>
-                  <div className="mt-2">
+                  <div className="">
                     <input
                       id="cellphone"
                       name="cellphone"
@@ -196,7 +196,7 @@ export const FormContact = () => {
                   >
                     Mensaje
                   </label>
-                  <div className="mt-2"></div>
+                  <div className=""></div>
                   <textarea
                     id="message"
                     name="message"
@@ -214,8 +214,8 @@ export const FormContact = () => {
               </div>
               <button
                 type="submit"
-                className="transition duration-150 ease-in-out cursor-pointer hover:-translate-y-1 pointer-events-auto border border-gray-200 hover:bg-primary hover:text-text hover:font-bold 
-            w-full rounded-md px-3 py-2 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-2"
+                className="mt-2 transition duration-150 ease-in-out cursor-pointer hover:-translate-y-1 pointer-events-auto border border-gray-200 hover:bg-primary hover:text-text hover:font-bold 
+            w-full rounded-md px-3 py-2 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 "
               >
                 Enviar
               </button>
