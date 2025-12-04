@@ -1,6 +1,6 @@
-export const EncabezadoPrincipal = () => {
+export const PrincipalHeader = () => {
   return (
-    <div className="flex flex-col items-center p-2 font-bold">
+    <div id="#" className="flex flex-col items-center p-2 font-bold">
       <h1 className=" capitalize text-clip">
         🏋️Tu compañero digital para una vida sana y activa.
       </h1>
