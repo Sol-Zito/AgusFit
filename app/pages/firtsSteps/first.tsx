@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router";
-import { FormContact } from "./FormContact";
-import { EncabezadoPrincipal } from "~/component/EncabezadoPrincipal";
+import { FormContact } from "../../component/ContactUs.tsx/FormContact";
+import { PrincipalHeader } from "~/component/PrincipalHeader";
 import { CiLock, CiUnlock } from "react-icons/ci";
 
 export function First() {
@@ -22,7 +22,7 @@ export function First() {
 
   return (
     <div className="flex flex-col items-center justify-center pb-4 gap-9 w-5/6 m-auto h-full">
-      <EncabezadoPrincipal />
+      <PrincipalHeader />
       <div>
         <h1>Hola!! Espero que estes bien💪🏻</h1>
         <Formik
