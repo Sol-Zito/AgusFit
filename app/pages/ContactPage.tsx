@@ -8,10 +8,13 @@ export const ContactPage = () => {
       <div className=" text-center border border-white p-5 mt-2 w-full md:w-auto">
         <h2>Social Medias</h2>
         <ul className=" py-5 flex items-center justify-evenly">
-          <Link to={"https://www.instagram.com/aguszito.fit/"}>
+          <Link to={"https://www.instagram.com/aguszito.fit/"} target="_blank">
             <BsInstagram className="size-6" />
           </Link>
-          <Link to="https://www.linkedin.com/in/agustin-zito-65b119241/">
+          <Link
+            to="https://www.linkedin.com/in/agustin-zito-65b119241/"
+            target="_blank"
+          >
             <BsLinkedin className="size-6" />
           </Link>
         </ul>
