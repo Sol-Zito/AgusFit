@@ -1,5 +1,3 @@
-//Pagina q muestra la lsita de los ejercicios segun la parte del cuerpo
-
 import { useEffect, useState } from "react";
 import { CardSimple } from "~/component/Card/CardSimple";
 import { PrincipalHeader } from "~/component/PrincipalHeader";
@@ -26,7 +24,6 @@ export function ExercisesByBodyPart({ data }: props) {
     try {
       const response = await getDataExercisesBodyPart(dataObtenida);
       const dataApi: DataApiExercise = response;
-      console.log("se obtuvo data nueva de api", dataApi);
       setData(dataApi.data);
       setApiData(dataApi.metadata);
       console.log("se cambio de pagina");
@@ -40,7 +37,6 @@ export function ExercisesByBodyPart({ data }: props) {
       try {
         const response = await getDataExercisesBodyPart(dataObtenida);
         const dataApi: DataApiExercise = response;
-        console.log("se obtuvo data de api", dataApi);
         setData(dataApi.data);
         setApiData(dataApi.metadata);
       } catch (error) {
