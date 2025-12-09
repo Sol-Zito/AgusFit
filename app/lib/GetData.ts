@@ -1,8 +1,4 @@
-import type {
-  DataApiExercise,
-  DataApiExerciseById,
-  DataExercise,
-} from "~/utils/dataexercise";
+import type { DataApiExercise, DataExercise } from "~/utils/dataexercise";
 
 export type propsDataExercises = {
   bodyPart: string;
@@ -21,7 +17,7 @@ export const getDataExercisesBodyPart = async ({
     const response = await fetch(urlDinamic);
 
     if (!response.ok) {
-      throw new Error("Error fetching products");
+      throw new Error("Error fetching data");
     }
 
     const data = await response.json();
@@ -50,10 +46,10 @@ export const getDataExercisesByMuscle = async ({
     const response = await fetch(urlDinamic);
 
     if (!response.ok) {
-      throw new Error("Error fetching products");
+      throw new Error("Error fetching data");
     }
 
-    const data = await response.json();
+    const data: DataApiExercise = await response.json();
 
     return data;
   } catch (error) {
@@ -70,7 +66,7 @@ export const getDataExercisesById = async (
     const response = await fetch(urldata);
 
     if (!response.ok) {
-      throw new Error("Error fetching products");
+      throw new Error("Error fetching data");
     }
     const dataApi = await response.json();
     console.log("dataApi al obtener ejercicio por id", dataApi);
