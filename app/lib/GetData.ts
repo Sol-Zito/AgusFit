@@ -81,3 +81,21 @@ export const getDataExercisesById = async (
     throw error;
   }
 };
+
+export const getRandomExercise = async (
+  dataBodyParts: string
+): Promise<DataApiExercise> => {
+  const urlBase = `https://www.exercisedb.dev/api/v1/exercises?offset=0&limit=6&search=${dataBodyParts}&sortBy=name&sortOrder=asc`;
+  try {
+    const response = await fetch(urlBase);
+    if (!response.ok) {
+      throw new Error("Error fetching data");
+    }
+    const dataApi = await response.json();
+    console.log("data ejercicios random", dataApi);
+    return dataApi;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
