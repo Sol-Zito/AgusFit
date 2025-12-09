@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 
-type dataBody = {
+type nameExercise = {
   name: string;
 };
 
-export const BodyPart = (part: dataBody) => {
+export const MuscleCard = (part: nameExercise) => {
   return (
     <Link
-      to={`/exercisesBodyPart/${part.name}`}
+      to={`/exercisesByMuscle/${part.name}`}
       key={part.name}
       className="p-2 rounded-xl border border-gray-200 
         transition delay-150 duration-300 ease-in-out cursor-pointer 
@@ -16,7 +16,7 @@ export const BodyPart = (part: dataBody) => {
         focus:-translate-y-1 focus:scale-110 focus:text-white
         focus:bg-linear-to-r from-footer-primary to-footer-secondary"
     >
-      {part.name.toLocaleUpperCase()}
+      {part.name.toUpperCase()}
     </Link>
   );
 };
