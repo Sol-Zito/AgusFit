@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router";
 import { ExerciseComplete } from "~/component/Card/ExerciseComplete";
 import { PrincipalHeader } from "~/component/PrincipalHeader";
@@ -16,7 +17,6 @@ export const ExerciseCompPage = ({ data }: props) => {
       try {
         const response = await getDataExercisesById(data);
         const dataApi: DataExercise = response;
-        console.log("se obtuvo data de api", dataApi);
         setApiData(dataApi);
       } catch (error) {
         alert("Error fetching data:");
@@ -29,14 +29,15 @@ export const ExerciseCompPage = ({ data }: props) => {
   return (
     <>
       <PrincipalHeader />
-      <div className="p-2">
+      <div className="p-2 max-w-max mx-auto">
         {dataExercise ? (
           <>
             <Link
-              to={`/exercisesBodyPart/${dataExercise?.bodyParts}`}
-              className="hover:border hover:p-2 my-5 cursor-pointer text-center text-primary antialiased font-semibold tracking-wide text-lg"
+              to={`/exercisesByMuscle/${dataExercise?.targetMuscles}`}
+              className="hover:border  hover:bg-primary ml-5 p-2 my-5 cursor-pointer items-center rounded-lg duration-300 transition-colors text-center text-primary hover:text-secondary antialiased tracking-wide text-lg"
             >
-              Go back to {dataExercise?.bodyParts} exercises
+              <BiArrowBack className="inline" /> Go back to{" "}
+              {dataExercise?.targetMuscles} exercises
             </Link>
             <ExerciseComplete
               key={dataExercise?.exerciseId}
