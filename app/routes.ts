@@ -6,5 +6,6 @@ export default [
   route("/welcome", "routes/principal.tsx"),
   route("/contactme", "routes/contact.tsx"),
   route("/exercisesBodyPart/:id", "routes/exercise.tsx"),
+  route("/exercisesByMuscle/:id", "routes/exerciseMuscle.tsx"),
   route("/exercisescomplete/:id", "routes/exerciseComplete.tsx"),
 ] satisfies RouteConfig;
