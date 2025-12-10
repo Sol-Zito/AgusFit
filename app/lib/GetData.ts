@@ -24,7 +24,6 @@ export const getDataExercisesBodyPart = async ({
 
     return data;
   } catch (error) {
-    console.error("Error:", error);
     throw error;
   }
 };
@@ -53,7 +52,6 @@ export const getDataExercisesByMuscle = async ({
 
     return data;
   } catch (error) {
-    console.error("Error:", error);
     throw error;
   }
 };
@@ -69,11 +67,9 @@ export const getDataExercisesById = async (
       throw new Error("Error fetching data");
     }
     const dataApi = await response.json();
-    console.log("dataApi al obtener ejercicio por id", dataApi);
 
     return dataApi.data;
   } catch (error) {
-    console.error("Error:", error);
     throw error;
   }
 };
@@ -91,7 +87,30 @@ export const getRandomExercise = async (
     console.log("data ejercicios random", dataApi);
     return dataApi;
   } catch (error) {
-    console.error("Error:", error);
+    throw error;
+  }
+};
+
+// buscar ejercicios por x
+
+export const getDataSearchingExercise = async (
+  dataToSearch: string
+): Promise<DataApiExercise> => {
+  const urlDinamic: string = `https://www.exercisedb.dev/api/v1/exercises/search?offset=0&limit=10&q=${dataToSearch}&threshold=0.3`;
+
+  try {
+    const response = await fetch(urlDinamic);
+    console.log("response.status", response.status);
+    if (response.status != 200) {
+      throw new Error("Error fetching data");
+    }
+    const data: DataApiExercise = await response.json();
+    if (data.metadata.totalExercises <= 0) {
+      throw new Error("Error fetching data");
+    } else {
+      return data;
+    }
+  } catch (error) {
     throw error;
   }
 };
