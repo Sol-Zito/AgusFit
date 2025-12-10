@@ -9,7 +9,7 @@ export const BodyPart = (part: dataBody) => {
     <Link
       to={`/exercisesBodyPart/${part.name}`}
       key={part.name}
-      className="p-2 rounded-xl border border-gray-200 
+      className="p-2 rounded-xl border border-gray 
         transition delay-150 duration-300 ease-in-out cursor-pointer 
         hover:-translate-y-1 hover:scale-110 hover:text-white
         hover:bg-linear-to-r from-footer-primary to-footer-secondary

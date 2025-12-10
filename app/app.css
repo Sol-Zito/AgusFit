@@ -5,7 +5,11 @@
   --color-primary: #cba503;
   --color-text-primary: #efcd29;
   --color-text: #18190a;
+  --color-gray: oklch(44.6% 0.03 256.802);
+  --color-indigo: oklch(87% 0.065 274.039);
   --color-footer-primary: #d9ae00;
+  --color-yellow-500: oklch(79.5% 0.184 86.047);
+  --color-primarytwo: #a9ab01;
   --color-footer-secondary: #161616;
   --color-secondary: #020202;
   --color-white: #f7f5ea;
@@ -15,7 +19,7 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  /* @apply bg-white dark:bg-gray-950; */
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
