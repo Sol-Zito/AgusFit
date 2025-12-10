@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ButtonToHome from "~/component/Button/ButtonToHome";
 import { CardSimple } from "~/component/Card/CardSimple";
 import { PrincipalHeader } from "~/component/PrincipalHeader";
 import {
@@ -50,6 +51,7 @@ export function ExercisesByBodyPart({ data }: props) {
   return (
     <>
       <PrincipalHeader />
+      <ButtonToHome />
       <h1 className="text-center text-primary antialiased font-semibold tracking-wide text-lg">
         Exercises to work the {data.toLocaleUpperCase()}
       </h1>
